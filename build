@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker build -t crashplan-deskop:4.4.1 .
