@@ -3,7 +3,7 @@
 #########################################
 
 FROM ubuntu
-MAINTAINER Jean François CASSAN <jfc@responsiveconsulting.fr>
+MAINTAINER simulot <jfcassan+github@gmail.com>
 
 
 # I have been insprired by
