@@ -30,7 +30,7 @@ MAINTAINER simulot <jfcassan+github@gmail.com>
 #   -v /etc/localtime:/etc/localtime \
 #   -v $(realpath .ui_info):/var/lib/crashplan/.ui_info \
 #   -v $XSOCK:$XSOCK -v $XAUTH:$XAUTH -e XAUTHORITY=$XAUTH \
-#   crashplan-desktop
+#   simulot/crashplan-desktop:4.4.1
 #
 
 
