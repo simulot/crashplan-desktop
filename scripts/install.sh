@@ -3,7 +3,7 @@
 #########################################
 ##        ENVIRONMENTAL CONFIG         ##
 #########################################
-
+echo "in install.sh"
 # Configure user nobody to match unRAID's settings
 export DEBIAN_FRONTEND="noninteractive"
 usermod -u 99 nobody
@@ -21,7 +21,7 @@ rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 cat <<'EOT' > /opt/install-crashplan.sh
 #!/bin/bash
-echo "dans /opt/install-crashplan.sh"
+echo "in /opt/install-crashplan.sh"
 APP_BASENAME=CrashPlan
 DIR_BASENAME=crashplan
 TARGETDIR=/usr/local/crashplan
@@ -54,6 +54,7 @@ echo "INSTALLDATE=$NOW" >> ${TARGETDIR}/install.vars
 cat ${INSTALL_DIR}/install.defaults >> ${TARGETDIR}/install.vars
 echo "JAVACOMMON=${JAVACOMMON}" >> ${TARGETDIR}/install.vars
 echo "${TARGETDIR}/install.vars"
+
 
 # Definition of ARCHIVE occurred above when we extracted the JAR we need to evaluate Java environment
 ARCHIVE=`ls ./*_*.cpi`
@@ -99,6 +100,7 @@ chmod -R 777 /usr/local/crashplan/bin
 
 # Remove install data
 rm -rf ${INSTALL_DIR}
+rm /tmp/CrashPlan.tgz
 
 EOT
 

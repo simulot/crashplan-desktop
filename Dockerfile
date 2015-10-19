@@ -52,7 +52,9 @@ ADD https://download.code42.com/installs/linux/install/CrashPlan/CrashPlan_${CP_
 
 # Add install script
 ADD scripts/install.sh /tmp/install.sh
-RUN chmod +x /tmp/install.sh; /tmp/install.sh; rm /tmp/install.sh
+RUN chmod +x /tmp/install.sh
+RUN /tmp/install.sh
+RUN rm /tmp/install.sh
 
 ENV DISPLAY :0
 
