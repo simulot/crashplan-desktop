@@ -1,0 +1,8 @@
+#!/bin/bash
+# update local .ui_info
+
+CP_SERVER=$(dig $1 +short)
+
+CP_UI_INFO=$(ssh root@$1 cat /var/lib/crashplan/.ui_info | cut -d, -f1-2)
+
+echo $CP_UI_INFO,$CP_SERVER > .ui_info
