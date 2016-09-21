@@ -30,12 +30,12 @@ MAINTAINER simulot <jfcassan+github@gmail.com>
 #   -v /etc/localtime:/etc/localtime \
 #   -v $(realpath .ui_info):/var/lib/crashplan/.ui_info \
 #   -v $XSOCK:$XSOCK -v $XAUTH:$XAUTH -e XAUTHORITY=$XAUTH \
-#   simulot/crashplan-desktop:4.4.1
+#   simulot/crashplan-desktop:4.7.0
 #
 
 
 # Crashplan version
-ENV CP_VERSION 4.4.1
+ENV CP_VERSION 4.7.0
 
 # Add needed packages
 RUN apt-get update -qq \
@@ -43,7 +43,7 @@ RUN apt-get update -qq \
     cpio \
     grep \
     gzip \
-    openjdk-7-jre \
+    openjdk-8-jre \
     sed \
   && rm -rf /var/lib/apt/lists/*
 
